@@ -1,0 +1,21 @@
+<resources>
+    <string name="large_text"></string>
+    <string name="action_settings">Settings</string>
+    <string name="app_name">MagicDate</string>
+    <string name="Year">Y</string>
+    <string name="Month">M</string>
+    <string name="Day">D</string>
+    <string name="date_picker_label">type your date for some magic</string>
+    <string name="go_button_text">MagicDate</string>
+    <string name="if_magic19_equals_today_text">Congrats you\'ll have a magic 19 soon!</string>
+    <string name="if_marsCalc_equals_today_text">Its all about Mars, you know.\nThe final frontier on humankind! Have you ever thought of how old would you be there? As one of the first pioneers and colonists.</string>
+    <string name="if_roundNDays_equals_today_text">Think of it.. Each thousand of days is much more rare date than 365, right?</string>
+    <string name="magic19_group_more_text">\t\t=>magic19</string>
+    <string name="marsCalc_group_more_text">\t\t=>marsCalc</string>
+    <string name="roundNDays_group_more_text">\n=>roundNDays</string>
+    <string name="add_calendar_event">add_calendar_event</string>
+    <string name="plus_sign">plus_sign</string>
+    <string name="service_not_available">(Geo) Service not available</string>
+    <string name="invalid_lat_long_used">Invalig coordinates</string>
+    <string name="about">About</string>
+</resources>
