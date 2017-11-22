@@ -1,49 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/wheel_picker_root_constraint_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="horizontal">
+    android:layout_height="match_parent">
 
-  <soberich.magicdate7.wheelpicker.widgets.WheelDayPicker
+  <soberich.magicdate7.view.ui.wheelpicker.widgets.WheelBackgroundView
+      android:id="@+id/wheel_background_view"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:layout_constraintBottom_toTopOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      android:background="@android:color/transparent"
+      />
+
+  <soberich.magicdate7.view.ui.wheelpicker.widgets.WheelDayPicker
       android:id="@+id/wheel_date_picker_day"
       android:layout_width="wrap_content"
-      android:layout_height="wrap_content" />
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/wheel_margins"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@+id/wheel_date_picker_day_tv"
+      app:layout_constraintHorizontal_chainStyle="packed"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      />
 
   <TextView
       android:id="@+id/wheel_date_picker_day_tv"
       android:layout_width="wrap_content"
-      android:textColor="@color/dmy_letters_color"
       android:layout_height="wrap_content"
-      android:layout_marginRight="@dimen/WheelMargins"
-      android:layout_marginLeft="@dimen/WheelMargins"
-      android:text="@string/Day" />
+      android:layout_marginEnd="@dimen/wheel_margins"
+      android:text="@string/Day"
+      android:textColor="@color/dmy_letters_color"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@+id/wheel_date_picker_month"
+      app:layout_constraintStart_toEndOf="@+id/wheel_date_picker_day"
+      app:layout_constraintTop_toTopOf="parent" />
 
-  <soberich.magicdate7.wheelpicker.widgets.WheelMonthPicker
+  <soberich.magicdate7.view.ui.wheelpicker.widgets.WheelMonthPicker
       android:id="@+id/wheel_date_picker_month"
       android:layout_width="wrap_content"
-      android:layout_height="wrap_content" />
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/wheel_margins"
+      app:layout_constraintEnd_toStartOf="@+id/wheel_date_picker_month_tv"
+      app:layout_constraintStart_toEndOf="@+id/wheel_date_picker_day_tv"
+      app:layout_constraintTop_toTopOf="@+id/wheel_date_picker_day" />
 
   <TextView
       android:id="@+id/wheel_date_picker_month_tv"
       android:layout_width="wrap_content"
-      android:textColor="@color/dmy_letters_color"
       android:layout_height="wrap_content"
-      android:layout_marginLeft="@dimen/WheelMargins"
-      android:layout_marginRight="@dimen/WheelMargins"
-      android:text="@string/Month" />
+      android:layout_marginEnd="@dimen/wheel_margins"
+      android:text="@string/Month"
+      android:textColor="@color/dmy_letters_color"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@+id/wheel_date_picker_year"
+      app:layout_constraintStart_toEndOf="@+id/wheel_date_picker_month"
+      app:layout_constraintTop_toTopOf="parent" />
 
-  <soberich.magicdate7.wheelpicker.widgets.WheelYearPicker
+  <soberich.magicdate7.view.ui.wheelpicker.widgets.WheelYearPicker
       android:id="@+id/wheel_date_picker_year"
       android:layout_width="wrap_content"
-      android:layout_height="wrap_content" />
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/wheel_margins"
+      app:layout_constraintEnd_toStartOf="@+id/wheel_date_picker_year_tv"
+      app:layout_constraintStart_toEndOf="@+id/wheel_date_picker_month_tv"
+      app:layout_constraintTop_toTopOf="@+id/wheel_date_picker_month" />
 
   <TextView
       android:id="@+id/wheel_date_picker_year_tv"
       android:layout_width="wrap_content"
-      android:textColor="@color/dmy_letters_color"
       android:layout_height="wrap_content"
-      android:layout_marginLeft="@dimen/WheelMargins"
-      android:text="@string/Year" />
+      android:text="@string/Year"
+      android:textColor="@color/dmy_letters_color"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@+id/wheel_date_picker_year"
+      app:layout_constraintTop_toTopOf="parent" />
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>

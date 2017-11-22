@@ -1,30 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_constraint_lout_of_nested_root"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="soberich.magicdate7.ScrollingActivity"
-    tools:showIn="@layout/activity_scrolling"
-    android:id="@+id/scrollView"
-    android:layout_marginBottom="8dp"
-    android:layout_marginEnd="8dp"
-    android:layout_marginStart="8dp"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_short"
+    android:layout_marginEnd="@dimen/margin_short"
+    android:layout_marginStart="@dimen/margin_short"
     android:layout_marginTop="35dp"
-    android:fillViewport="true"
     >
 
-    <LinearLayout
-        android:id="@+id/linearListLayout"
-        android:layout_width="match_parent"
+    <ExpandableListView
+        android:id="@+id/expandable_list_view"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:nestedScrollingEnabled="true"
+        android:divider="@color/colorPrimary"
+        android:dividerHeight="1dp"
+        android:indicatorStart="3000dp"
+        android:indicatorEnd="3030dp"
+        tools:listitem="@layout/list_group"
+        android:scrollbars="none"
+        app:layout_constraintWidth_max="400dp"
+        />
 
-        <ExpandableListView
-            android:id="@+id/expandableListView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
 
-</android.support.v4.widget.NestedScrollView>
